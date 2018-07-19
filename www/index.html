@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Cantina</title>
+    <link rel="stylesheet" href="icons/material.css">
+    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="topo-fixo z-depth-1">
+
+    	
+
+            <div class="valign-wrapper red darken-3 white-text">
+
+            <h5 class="titulo">Cantina</h5>
+
+            
+          <h5 id="creditosTela" class="creditos center-align"></h5>
+        
+
+
+
+             <div class="float-action-btn">
+        <a class="btn-floating btn-large waves-effect waves-light red darken-3 modal-trigger"
+           href="#creditos" id="confirmar">
+            <i class="material-icons waves-effect waves-light waves-circle">credit_card</i>
+        </a>
+    </div>
+  
+        </div>
+        
+    </div>
+
+    <div class="rodape-fixo z-depth-5">
+         <ul class="tabs red darken-3">
+            <li class="tab">
+                <a href="#conta"
+                   class="white-text waves-effect waves-light">
+                    <i class="material-icons">account_box</i>
+
+                </a>
+            </li>
+            <li class="tab">
+                <a href="#menu"
+                   class="white-text waves-effect waves-light active">
+                    <i class="material-icons">restaurant_menu</i>
+                </a>
+            </li>            
+            <li class="tab">
+                <a href="#carrinho"
+                   class="white-text waves-effect waves-light">
+                    <i class="material-icons">local_grocery_store</i>
+                </a>
+            </li>
+            
+        </ul>
+    
+
+       
+    </div>
+
+    <div id="conta" class="section">
+
+       <h5 class="contato"><center>Meus pedidos</center></h5>
+
+               <table>
+        <thead>
+          <tr>
+              <th>Número do Pedido</th>
+              <th>Valor</th>
+              <th>Detalhes</th>
+          </tr>
+        </thead>
+
+        <tbody id="pedidosDetalhes" class="responsive-table">
+        <tr>
+          
+        </tr>
+
+        </tbody>
+         </table>
+
+            </center>
+            <br><br>
+
+    <h5 class="contato"><center>Meus dados</center></h5>
+        
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="nome" type="text" class="validate" disabled="" value="Claudio">
+          <label for="nome"></label>
+        </div>
+        <div class="input-field col s6">
+          <input id="sobrenome" type="text" class="validate" disabled="" value="Ronaldo">
+          <label for="sobrenome"></label>
+        </div>
+      </div>
+     
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="cpf" type="text" class="validate" disabled="" value="155.653.489.54">
+          <label for="cpf"></label>
+        </div>
+      </div>
+      <div class="row">
+      
+        <div class="input-field col s12">
+          <input id="telefone" type="text" class="validate" disabled="" value="(47) 00000-0000">
+            <label for="telefone"></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+
+          <input id="email" type="email" class="validate" disabled="" value="claudioronaldo@gmail.com">
+           <label for="email"></label>
+        </div>
+      </div>
+    </form>
+
+    <center>
+<button id="editarPerfil" class="btn blue darken-3 waves-effect waves-light">
+                Editar
+            </button>
+            <br><br><br><br>
+           
+  </div>
+
+
+
+    <div id="menu" class="section">
+
+      
+
+        <h6 class="container brown-text">Lanches</h6>
+        <div class="collection">
+            <a class="collection-item avatar waves-effect black-text">
+            <img class="responsive-img circle" src="img/bauru-lanche3.jpg">
+
+            <i class="material-icons right">add_shopping_cart</i>
+         <h6 id="produto">Bauru</h6><h6 id="preco">R$ 4,50</h6>
+
+     </a>
+
+  <a class="collection-item avatar waves-effect black-text">
+            <img class="responsive-img circle" src="img/pastel.jpg">
+
+            <i class="material-icons right">add_shopping_cart</i>
+
+
+
+         <h6 id="produto">Pastel</h6><h6 id="preco">R$ 5,00</h6>
+     </a>
+
+        </div>
+
+
+
+ 
+                 <h6 class="container brown-text">Bebidas</h6>
+        <div class="collection">
+            <a  class="collection-item avatar waves-effect black-text">
+            <img class="responsive-img circle" src="img/coca.jpg">  <!-- foto produto --> 
+            <i class="material-icons right">add_shopping_cart</i>
+         <h6 id="produto">Refrigerante Coca-Cola</h6><h6 id="preco">R$ 6,50</h6></a>
+    
+             </div>
+
+
+    </div>
+
+        <div id="carrinho" class="section">
+     
+       <i class="material-icons">local_grocery_store</i>
+
+<div class="vallign-wrapper right btn-small">
+	
+
+       <button id="btnFinalizar" class="btn waves-effect waves-light green darken-3" type="submit" name="action">Finalizar
+    <i class="material-icons right">check</i>
+  </button>
+
+  </div>
+       <table id="tabela1">
+        <thead>
+          <tr>
+              <th>Código</th>
+              <th>Produto</th>
+              <th>Preço</th>
+              <th>Excluir</th>
+          </tr>
+        </thead>
+
+        <tbody id="carrones" class="responsive-table">
+        <tr>
+          
+        </tr>
+
+        </tbody>
+         </table>
+         <br><br>
+      
+    </div>
+
+ <div id="creditos" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h5>Adicionar Créditos</h5>
+
+            <br><br>
+
+            <h6>Numero do Cartão</h6>
+              <input type="text" id="cartaoUsado" placeholder="Digite o Numero do Cartão">
+            <br><br>
+            <h6>Créditos a serem colocados</h6>
+            <input type="text" id="creditosColocar" placeholder="Digite a Quantidade de créditos">
+            <br><br>
+       
+         
+        </div>
+        <div class="modal-footer">
+            <button id="addCreditos" class="btn green darken-3 waves-effect waves-light modal-close">
+                Adicionar
+            </button>
+            <button class="btn-flat waves-effect waves-red modal-close acao-limpar">
+                Cancelar
+            </button>
+        </div>
+    </div>
+  
+
+
+   
+
+
+   
+
+    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
